@@ -9,6 +9,6 @@ class Product < ActiveRecord::Base
 
 
   def self.latest
-    Product.order(:update_at).last
+    Product.order(:updated_at).last
   end
 end
