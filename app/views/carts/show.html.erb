@@ -1,7 +1,8 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
+<div class="cart_title">Your Cart</div>
+<table>
+  <%= render(@cart.line_items) %>
 
+<<<<<<< HEAD
 <h2>Your Pragmatic Cart</h2>
 <ul>
   <% @cart.line_items.each do |item| %>
@@ -10,3 +11,11 @@
 </ul>
 
 <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm:'Are you sure?' }%>
+=======
+  <tr class="total_price">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?' %>
+>>>>>>> e2ee3b024185a0ca16110e69b0cbe925cd6112b8
