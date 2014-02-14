@@ -13,15 +13,13 @@
   </div>
   <div id="columns">
     <div id="side">
-      <ul>
-        <li><a href="#">Home<%= session[:cart_id] %></li>
-        <li><a href="#">Questions</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul>
-        <%= Time.now %>
-      </ul>
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+        <a href="#">Home<%= session[:cart_id] %></a>
+        <a href="#">Questions</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
     </div>
     <div id="main">
       <%= yield %>      
